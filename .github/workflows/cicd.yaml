@@ -1,0 +1,18 @@
+name: Simple CI/CD Simulation
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  simulate_task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Simulate CI/CD task
+        run: |
+          echo "Starting CI/CD simulation task..."
+          sleep 5
+          echo "Task completed successfully!"
